@@ -1,13 +1,13 @@
-﻿using NeedfulThings.Application.DTOs;
-using NeedfulThings.Application.Mappers;
-using NeedfulThings.Domain.Entities;
-using NeedfulThings.Domain.Repositories;
+﻿using OnlineBookStore.Application.DTOs;
+using OnlineBookStore.Application.Mappers;
+using OnlineBookStore.Domain.Entities;
+using OnlineBookStore.Domain.Repositories;
 
-namespace NeedfulThings.Application.Services;
+namespace OnlineBookStore.Application.Services;
 
 public class WeatherService(IWeatherForecastRepository repository, WeatherMapper mapper, ILogger<WeatherService> logger)
 {
-    public async Task<IEnumerable<WeatherDto>> GetAll()
+    /*public async Task<IEnumerable<WeatherDto>> GetAll()
     {
         logger.LogInformation("GetAll...");
         var entities = await repository.GetAllAsync();
@@ -27,5 +27,5 @@ public class WeatherService(IWeatherForecastRepository repository, WeatherMapper
     {
         var entity =  await repository.GetById(id);
         return entity != null ? mapper.ToDto(entity) : null;
-    }
+    }*/
 }

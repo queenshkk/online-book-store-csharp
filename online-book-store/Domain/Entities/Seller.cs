@@ -1,4 +1,4 @@
-﻿namespace NeedfulThings.Domain.Entities
+﻿namespace OnlineBookStore.Domain.Entities
 {
     /*id : int, clé primaire.
     name : string, obligatoire, maximum 100 caractères.
@@ -7,11 +7,11 @@
     */
     public class Seller
     {
-        int id { get; set; }
-        string name { get; set; } = null!;
-        string TVA { get; set; } = null!;
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public string TVA { get; set; } = null!;
 
-        public List<SellerItem> sellerItems { get; set; } = new List<SellerItem>();
-        public List<CaddyItem> caddyItems { get; set; } = new List<CaddyItem>();
+        public List<SellerItem> SellerItems { get; set; } = new List<SellerItem>();
+        public List<CaddyItem> CaddyItems { get; set; } = new List<CaddyItem>();
     }
 }

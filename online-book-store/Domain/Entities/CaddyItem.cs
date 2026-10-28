@@ -1,4 +1,4 @@
-﻿namespace NeedfulThings.Domain.Entities
+﻿namespace OnlineBookStore.Domain.Entities
 {
 
     /*id : int, clé primaire.
@@ -9,14 +9,14 @@
     */
     public class CaddyItem
     {
-        int id { get; set; }
-        int caddyId { get; set; }
-        int bookId { get; set; }
-        int sellerId { get; set; }
-        int quantity { get; set; }
+        public int Id { get; set; }
+        public int CaddyId { get; set; }
+        public int BookId { get; set; }
+        public int SellerId { get; set; }
+        public int Quantity { get; set; }
 
-        public Caddy caddy { get; set; } = null!;
-        public Book book { get; set; } = null!;
-        public Seller seller { get; set; } = null!;
+        public Caddy Caddy { get; set; } = null!;
+        public Book Book { get; set; } = null!;
+        public Seller Seller { get; set; } = null!;
     }
 }

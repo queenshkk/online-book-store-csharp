@@ -1,10 +1,12 @@
-using NeedfulThings.Domain.Entities;
+using OnlineBookStore.Domain.Entities;
 
-namespace NeedfulThings.Domain.Repositories;
+namespace OnlineBookStore.Domain.Repositories;
 
 public interface IWeatherForecastRepository
 {
-    Task<IEnumerable<WeatherForecast>> GetAllAsync();
+    /*Task<IEnumerable<WeatherForecast>> GetAllAsync();
     Task<int> AddAsync(WeatherForecast entity);
     Task<WeatherForecast?> GetById(int id);
+
+    */
 }

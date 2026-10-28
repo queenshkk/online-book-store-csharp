@@ -1,4 +1,4 @@
-﻿namespace NeedfulThings.Domain.Entities
+﻿namespace OnlineBookStore.Domain.Entities
 {
     /*id : int, clé primaire.
     author_id : int, clé étrangère obligatoire vers authors.id.
@@ -13,20 +13,20 @@
      */
     public class Book
     {
-        int id { get; set; }
-        int author_id { get; set; }
-        int subject_id { get; set; }
-        string title { get; set; } = null!;
-        string isbn { get; set; } = null!;
-        int page_count { get; set; }
-        int stock_quantity { get; set; }
-        decimal price { get; set; }
-        int publish_year { get; set; }
+        public int Id { get; set; }
+        public int AuthorId { get; set; }
+        public int SubjectId { get; set; }
+        public string Title { get; set; } = null!;
+        public string Isbn { get; set; } = null!;
+        public int PageCount { get; set; }
+        public int StockQuantity { get; set; }
+        public decimal Price { get; set; }
+        public int PublishYear { get; set; }
 
-        public Author author { get; set; } = null!;
-        public Subject subject { get; set; } = null!;
+        public Author Author { get; set; } = null!;
+        public Subject Subject { get; set; } = null!;
 
-        public List<CaddyItem> caddyItems { get; set; } = new List<CaddyItem>();
-        public List<SellerItem> sellerItems { get; set; } = new List<SellerItem>();
+        public List<CaddyItem> CaddyItems { get; set; } = new List<CaddyItem>();
+        public List<SellerItem> SellerItems { get; set; } = new List<SellerItem>();
     }
 }

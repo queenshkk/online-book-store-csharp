@@ -1,6 +1,6 @@
 ﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace NeedfulThings.Domain.Entities
+namespace OnlineBookStore.Domain.Entities
 {
     /*id : int, clé primaire.
     clientId : int, clé étrangère obligatoire vers clients.id.
@@ -10,15 +10,15 @@ namespace NeedfulThings.Domain.Entities
     */
     public class Caddy
     {
-        int id { get; set; }
-        int clientId { get; set; }
-        DateTime date { get; set; }
-        decimal amount { get; set; }
-        bool payed { get; set; }
+        public int Id { get; set; }
+        public int ClientId { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Amount { get; set; }
+        public bool Payed { get; set; }
 
-        public Client client { get; set; } = null!;
+        public Client Client { get; set; } = null!;
 
-        public List<CaddyItem> caddyItems { get; set; } = new List<CaddyItem>();
+        public List<CaddyItem> CaddyItems { get; set; } = new List<CaddyItem>();
 
     }
 }

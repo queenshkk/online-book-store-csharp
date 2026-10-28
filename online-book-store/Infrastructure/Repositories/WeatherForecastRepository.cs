@@ -1,12 +1,12 @@
-using NeedfulThings.Domain.Entities;
+using OnlineBookStore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using NeedfulThings.Domain.Repositories;
+using OnlineBookStore.Domain.Repositories;
 
-namespace NeedfulThings.Infrastructure.Repositories;
+namespace OnlineBookStore.Infrastructure.Repositories;
 
-public class WeatherForecastRepository(NeedfulThingsContext context) : IWeatherForecastRepository
+public class WeatherForecastRepository(TodoContext context) : IWeatherForecastRepository
 {
-    public async Task<IEnumerable<WeatherForecast>> GetAllAsync()
+    /*public async Task<IEnumerable<WeatherForecast>> GetAllAsync()
     {
         return await context.WeatherForecasts
             .Include(w => w.Region)
@@ -26,4 +26,5 @@ public class WeatherForecastRepository(NeedfulThingsContext context) : IWeatherF
             .Include(w => w.Region)
             .FirstOrDefaultAsync(forecast => forecast.Id == id);
     }
+    */
 }

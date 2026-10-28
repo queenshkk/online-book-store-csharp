@@ -1,15 +1,15 @@
-using NeedfulThings.Application.DTOs;
-using NeedfulThings.Application.Services;
+using OnlineBookStore.Application.DTOs;
+using OnlineBookStore.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace NeedfulThings.Presentation.Controllers;
+namespace OnlineBookStore.Presentation.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController(WeatherService service, ILogger<WeatherForecastController> logger)
     : ControllerBase
 {
-    [HttpGet]
+    /*[HttpGet]
     public async Task<ActionResult<IEnumerable<WeatherDto>>> GetAll()
     {
         logger.LogInformation("GET WeatherForecast");
@@ -39,4 +39,5 @@ public class WeatherForecastController(WeatherService service, ILogger<WeatherFo
 
         return CreatedAtAction(nameof(GetById), new { id = idEntity }, item);
     }
+    */
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.SqlServer.Server;
 
-namespace NeedfulThings.Domain.Entities
+namespace OnlineBookStore.Domain.Entities
 {
     /*id : int, clé primaire et numéro de client.
     nom : string, obligatoire, maximum 50 caractères.
@@ -14,16 +14,16 @@ namespace NeedfulThings.Domain.Entities
     */
     public class Client
     {
-        int id { get; set; }
-        string nom { get; set; } = null!;
-        string prenom { get; set; } = null!;
-        string email { get; set; } = null!;
-        string adresse { get; set; } = null!;
-        string code_postal { get; set; } = null!;
-        string ville { get; set; } = null!;
-        string pays { get; set; } = null!;
-        string? telephone { get; set; } = null!;
+        public int Id { get; set; }
+        public string Nom { get; set; } = null!;
+        public string Prenom { get; set; } = null!;
+        public string Email { get; set; } = null!;
+        public string Adresse { get; set; } = null!;
+        public string CodePostal { get; set; } = null!;
+        public string Ville { get; set; } = null!;
+        public string Pays { get; set; } = null!;
+        public string? Telephones { get; set; } = null!;
 
-        public List<Caddy> caddies { get; set; } = new List<Caddy>();
+        public List<Caddy> Caddies { get; set; } = new List<Caddy>();
     }
 }

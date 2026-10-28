@@ -1,13 +1,13 @@
-using NeedfulThings.Domain.Entities;
+using OnlineBookStore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace NeedfulThings.Infrastructure;
+namespace OnlineBookStore.Infrastructure;
 
 public static class SeedData
 {
-    public static void Initialize(NeedfulThingsContext context)
+    public static void Initialize(TodoContext context)
     {
-        if (context == null) throw new ArgumentNullException(nameof(context));
+        /*if (context == null) throw new ArgumentNullException(nameof(context));
 
         // Ensure database created (works for InMemory and relational providers)
         context.Database.EnsureCreated();
@@ -52,4 +52,6 @@ public static class SeedData
     [
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     ];
+        */
+    }
 }

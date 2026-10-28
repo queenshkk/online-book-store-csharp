@@ -1,13 +1,13 @@
-﻿using NeedfulThings.Application.DTOs;
-using NeedfulThings.Domain.Entities;
+﻿using OnlineBookStore.Application.DTOs;
+using OnlineBookStore.Domain.Entities;
 using Riok.Mapperly.Abstractions;
 
-namespace NeedfulThings.Application.Mappers;
+namespace OnlineBookStore.Application.Mappers;
 
 [Mapper]
 public partial class WeatherMapper
 {
-    public partial WeatherDto ToDto(WeatherForecast entity);
+    /*public partial WeatherDto ToDto(WeatherForecast entity);
 
     [MapperIgnoreTarget(nameof(WeatherForecast.Region))]
     [MapperIgnoreSource(nameof(WeatherDto.RegionName))]
@@ -16,4 +16,5 @@ public partial class WeatherMapper
     [MapperIgnoreTarget(nameof(WeatherForecast.Id))]
     [MapperIgnoreTarget(nameof(WeatherForecast.Region))]
     public partial WeatherForecast ToEntity(WeatherCreateDto dto);
+    */
 }

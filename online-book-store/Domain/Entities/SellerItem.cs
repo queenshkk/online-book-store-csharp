@@ -1,18 +1,18 @@
-﻿namespace NeedfulThings.Domain.Entities
+﻿namespace OnlineBookStore.Domain.Entities
 {
-
     /*sellerId : int, clé étrangère obligatoire vers sellers.id.
     bookId : int, clé étrangère obligatoire vers books.id.
     quantity_in_stock et price (voir book).
     */
     public class SellerItem
     {
-        int sellerId { get; set; }
-        int bookId { get; set; }
-        int quantity_in_stock { get; set; }
+        public int SellerId { get; set; }
+        public int BookId { get; set; }
+        public int QuantityInStock { get; set; }
+        public decimal Price { get; set; }
 
-        public Seller seller { get; set; } = null!;
-        public Book book { get; set; } = null!;
+        public Seller Seller { get; set; } = null!;
+        public Book Book { get; set; } = null!;
 
     }
 }

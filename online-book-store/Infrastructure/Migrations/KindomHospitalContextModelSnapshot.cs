@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace NeedfulThings.Infrastructure.Migrations
+namespace OnlineBookStore.Infrastructure.Migrations
 {
-    [DbContext(typeof(NeedfulThingsContext))]
+    [DbContext(typeof(TodoContext))]
     partial class NeedfulThingsContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

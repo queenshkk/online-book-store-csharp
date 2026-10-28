@@ -1,9 +1,9 @@
 using Serilog;
 using Microsoft.EntityFrameworkCore;
-using NeedfulThings.Infrastructure;
-using NeedfulThings.Infrastructure.Repositories;
+using OnlineBookStore.Infrastructure;
+using OnlineBookStore.Infrastructure.Repositories;
 using Scalar.AspNetCore;
-using NeedfulThings.Domain.Repositories;
+using OnlineBookStore.Domain.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +21,7 @@ builder.Services.AddSingleton<NeedfulThings.Application.Mappers.WeatherMapper>()
 builder.Services.AddScoped<NeedfulThings.Application.Services.WeatherService>();
 //Ajouter les repositories au DI
 var connectionString = builder.Configuration.GetConnectionString("BazaarConnection");
-builder.Services.AddDbContext<NeedfulThingsContext>(options =>
+builder.Services.AddDbContext<TodoContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IWeatherForecastRepository, WeatherForecastRepository>();
 
@@ -30,7 +30,7 @@ var app = builder.Build();
 // Seed data
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<NeedfulThingsContext>();
+    var db = scope.ServiceProvider.GetRequiredService<TodoContext>();
     SeedData.Initialize(db);
 }
 
